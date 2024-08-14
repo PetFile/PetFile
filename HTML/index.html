@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="shortcut icon" href="../IMG/Pet.png">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inicio de Sesión</h2>
+        <form action="../PHP/iniciar_sesion.php" method="post">
+            <div class="form-group">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button id="btnin" type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        // Verificar si el parámetro "error" está presente en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('error')) {
+            alert('Acceso Denegado');
+        }
+    </script>
+</body>
+</html>
+
+
+

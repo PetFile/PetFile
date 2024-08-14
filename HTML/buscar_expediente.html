@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Expediente</title>
+    <link rel="stylesheet" href="../CSS/stylesE.css">
+    <link rel="shortcut icon" href="../IMG/Pet.png">
+</head>
+<body>
+    <header id="header"> 
+        <h1>PetFile</h1> 
+        <a href="principal.html"><button class="button3">Volver al Inicio</button></a>
+        <div class="clock" id="clock"></div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const year = now.getFullYear();
+
+                const timeString = `${hours}:${minutes}`;
+                const dateString = `${day}/${month}/${year}`;
+
+                document.getElementById('clock').innerHTML = `${dateString} ${timeString}`;
+            }
+
+            setInterval(updateClock, 1000); 
+            updateClock(); 
+        </script>
+    </header>
+    <hr id="hr1">
+
+    <div class="container">
+        <div id="search-bar">
+            <form action="../PHP/mostrar_expediente.php" method="post">
+                <h1 id ="h11">Buscar expedientes</h1>
+                <br>
+                <input type="text" name="phone" placeholder="Ingrese el teléfono del propietario" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <div id="expediente">
+            <!-- Aquí se mostrará la información del expediente -->
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+</body>
+</html>
+
+
+

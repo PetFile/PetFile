@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Citas</title>
+    <link rel="stylesheet" href="../CSS/sylesC.css">
+</head>
+<body>
+    <header id="header"> 
+        <h1>PetFile</h1> 
+        <a href="principal.html"> <button class="button3">Volver al Inicio</button></a>
+        <div class="clock" id="clock"></div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const year = now.getFullYear();
+
+                const timeString = `${hours}:${minutes}`;
+                const dateString = `${day}/${month}/${year}`;
+
+                document.getElementById('clock').innerHTML = `${dateString} ${timeString}`;
+            }
+
+            setInterval(updateClock, 1000); 
+            updateClock(); 
+        </script>
+    </header>
+    <div>
+    <main>
+        <section id="registro-cita">
+            <h2>Registrar Cita</h2>
+            <form action="../PHP/registro_cita.php" method="post">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+                <input type="submit" value="Registrar Cita">
+            </form>
+        </section>
+        <section id="citas-registradas">
+            <h2>Citas Registradas</h2>
+            <ul id="lista-citas">
+                <!-- Aquí se mostrarán las citas registradas -->
+            </ul>
+        </section>
+    </main>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // Función para mostrar las citas registradas
+        function mostrarCitas() {
+            const listaCitas = document.getElementById('lista-citas');
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '../PHP/mostrar_citas.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const citas = JSON.parse(xhr.responseText);
+                    citas.forEach(cita => {
+                        const li = document.createElement('li');
+                        li.textContent = `Fecha: ${cita.fecha} - Hora: ${cita.hora} - Descripción: ${cita.descripcion}`;
+                        listaCitas.appendChild(li);
+                    });
+                }
+            };
+            xhr.send();
+        }
+        // Mostrar citas al cargar la página
+        mostrarCitas();
+    </script>
+</body>
+</html>

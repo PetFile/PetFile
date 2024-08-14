@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetFile</title>
+    <link rel="stylesheet" href="../CSS/stylesPG.css">
+    <link rel="shortcut icon" href="../IMG/Pet.png">
+</head>
+<body>
+    <div id="contenedor">
+        <header id="header"> 
+            <h1>PetFile</h1>
+            <div class="clock" id="clock"></div>
+            <script>
+                function updateClock() {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    const day = String(now.getDate()).padStart(2, '0');
+                    const month = String(now.getMonth() + 1).padStart(2, '0');
+                    const year = now.getFullYear();
+        
+                    const timeString = `${hours}:${minutes}`;
+                    const dateString = `${day}/${month}/${year}`;
+        
+                    document.getElementById('clock').innerHTML = `${dateString} ${timeString}`;
+                }
+        
+                setInterval(updateClock, 1000); 
+                updateClock(); 
+            </script>
+            <a id="a1" href="principal.html"> <button class="button3">Volver al Inicio</button></a>
+            </header>
+
+        <hr id="hr1">
+        <img id="p" src="../IMG/perrofeliz.jpg" alt="perro">
+        <h1 id = "h1">Guardado con Exito</h1>
+        <hr id="hr2">
+    </div>
+    <footer id="footer"></footer>
+</body>
+</html>

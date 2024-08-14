@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Propietario</title>
+    <link rel="stylesheet" href="../CSS/stylesF.css">
+    <link rel="shortcut icon" href="../IMG/Pet.png">
+</head>
+<body>
+    <header id="header"> 
+        <h1>PetFile</h1> 
+        <a href="principal.html"> <button class="button3">Volver al Inicio</button></a>
+        <div class="clock" id="clock"></div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const year = now.getFullYear();
+
+                const timeString = `${hours}:${minutes}`;
+                const dateString = `${day}/${month}/${year}`;
+
+                document.getElementById('clock').innerHTML = `${dateString} ${timeString}`;
+            }
+
+            setInterval(updateClock, 1000); 
+            updateClock(); 
+        </script>
+    </header>
+    <hr id="hr1">
+    <div class="container">
+        <div class="form-section">
+            <h2>Formulario Veterinaria</h2>
+            <form id="veterinaryForm" action="../PHP/guardar_datos.php" method="post">
+                <h3>Datos del Propietario</h3>
+                <label for="ownerName">Nombre:</label>
+                <input type="text" id="ownerName" name="ownerName" required>
+                
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <h3>Datos del Paciente</h3>
+                <label for="petName">Nombre:</label>
+                <input type="text" id="petName" name="petName" required>
+                
+                <label for="species">Especie:</label>
+                <input type="text" id="species" name="species" required>
+                
+                <label for="breed">Raza:</label>
+                <input type="text" id="breed" name="breed" required>
+                
+                <label for="sex">Sexo:</label>
+                <input type="text" id="sex" name="sex" required>
+                
+                <label for="weight">Peso (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+                
+                <label for="cc">CC:</label>
+                <input type="text" id="cc" name="cc" required>
+                
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+                
+                <label for="foodType">Tipo de Alimentación:</label>
+                <input type="text" id="foodType" name="foodType" required>
+                
+                <h3>Motivo de Consulta</h3>
+                <textarea id="consultationReason" name="consultationReason" required></textarea>
+
+                <h3>Estado del Paciente</h3>
+                <label for="fc">F.C:</label>
+                <input type="text" id="fc" name="fc" required>
+                
+                <label for="fr">F.R:</label>
+                <input type="text" id="fr" name="fr" required>
+                
+                <label for="linfonodos">Linfonodos:</label>
+                <input type="text" id="linfonodos" name="linfonodos" required>
+                
+                <label for="mucosas">Mucosas:</label>
+                <input type="text" id="mucosas" name="mucosas" required>
+                
+                <label for="dh"> %DH:</label>
+                <input type="text" id="dh" name="dh" required>
+                
+                <label for="pulse">Pulso:</label>
+                <input type="text" id="pulse" name="pulse" required>
+                
+                <label for="tllc">TLL.C:</label>
+                <input type="text" id="tllc" name="tllc" required>
+
+                <button type="submit" name="guardar" value="Guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+          
+    <footer id="footer"></footer>
+</body>
+</html>
+
+

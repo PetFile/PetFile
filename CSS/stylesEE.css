@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados */
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Sección de propietario y paciente */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Párrafos */
+p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Estilos específicos para títulos de sección */
+.section-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Tabla de datos */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.table td {
+    background-color: #fff;
+}
+
+/* Estilos para alertas */
+.alert {
+    color: red;
+    font-weight: bold;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+#a1 {
+    border: none;
+    border-radius: 30px;
+    color: #EDFFCC;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    height: 25px;
+    width: 50%;
+    border: none;
+    text-decoration: none;
+    background: rgb(0, 48, 121);
+    font-size: 16px;
+    position: absolute;
+    top: 250%;
+    left: 25%;
+
+}

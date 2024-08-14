@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#contenedor{
+    height: 630px;
+    width: 100%;
+    background: #FFFFFF;
+}
+#header{
+    height: 100px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgba(0, 49, 139, 0.8), rgba(32, 185, 185, 0.5)); 
+    color: white; 
+    text-align: center;
+}
+.clock {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    position: absolute;
+    top: 55px;
+    left: 1000px;
+}
+
+h1{
+    color: #FFFFFF;
+}
+
+.button1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #2F3B69;
+    color: #EDFFCC;
+    font-size: 16px;
+    position: absolute;
+    top: 250px;
+    left: 800px;
+}
+.button2 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #2F3B69;
+    color: #EDFFCC;
+    font-size: 16px;
+    position: absolute;
+    top: 350px;
+    left: 800px;
+}
+.button3 {
+    height: 20px;
+    width: 150px;
+    border: none;
+    background: none;
+    color: #EDFFCC;
+    font-size: 16px;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+}
+
+.button4 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #2F3B69;
+    color: #EDFFCC;
+    font-size: px;
+    position: absolute;
+    top: 450px;
+    left: 800px;
+}
+
+.button1:hover {
+    background-color: #24ABDB;
+}
+.button2:hover {
+    background-color: #24ABDB;
+}
+.button4:hover {
+    background-color: #24ABDB;
+}
+
+#footer{
+    background: linear-gradient(to right, rgba(0, 49, 139, 0.8), rgba(32, 185, 185, 0.5)); 
+    height: 60px;
+}
+#hr1 {
+    border: none;
+    height: 2px;
+    width: 1200px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+#hr2 {
+    border: none;
+    height: 2px;
+    width: 1200px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 620px;
+    left: 45px;
+}
+#logo{
+    position: absolute;
+    top: 150px;
+    left: 60px;
+}
+#a1{
+    font-family: 'Tahoma', Geneva, sans-serif;
+    text-decoration: none; 
+}
+
+
+
+
